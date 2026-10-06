@@ -18,25 +18,25 @@
       }
       * { box-sizing: border-box; }
       body { margin: 0; background: #e8ebe6; color: var(--ink); font: 13px/1.5 var(--sans); }
-      .page { width: 210mm; min-height: 297mm; margin: 24px auto; padding: 16mm 18mm 14mm; background: #fff; box-shadow: 0 8px 35px #18221c18; }
-      header { display: flex; align-items: end; justify-content: space-between; gap: 20px; padding-bottom: 12px; border-bottom: 2px solid var(--green); }
-      h1 { margin: 0; font: 500 31px/1.08 var(--serif); letter-spacing: -.035em; }
-      .discipline { margin: 6px 0 0; color: var(--green); font-size: 10px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
-      .contact { display: grid; gap: 3px; color: var(--muted); font-size: 9px; text-align: right; }
+      .page { width: 210mm; min-height: 297mm; margin: 24px auto; padding: 15mm 18mm 14mm; background: #fff; box-shadow: 0 8px 35px #18221c18; }
+      header { display: flex; align-items: end; justify-content: space-between; gap: 24px; padding-bottom: 14px; border-bottom: 2px solid var(--green); }
+      h1 { margin: 0; font: 500 34px/1.08 var(--serif); letter-spacing: -.035em; }
+      .discipline { margin: 7px 0 0; color: var(--green); font-size: 10px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+      .contact { display: grid; gap: 4px; color: var(--muted); font-size: 9.5px; text-align: right; }
       a { color: inherit; text-decoration: none; }
-      h2 { display: flex; align-items: center; gap: 9px; margin: 17px 0 7px; color: var(--green); font-size: 10px; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
+      h2 { display: flex; align-items: center; gap: 9px; margin: 18px 0 9px; color: var(--green); font-size: 10px; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
       h2::after { height: 1px; flex: 1; background: var(--line); content: ""; }
-      .profile { margin: 0; color: #434d46; font-size: 10.2px; line-height: 1.6; }
-      .role, .entry { margin-top: 8px; }
+      .profile { margin: 0; color: #434d46; font-size: 10.5px; line-height: 1.65; }
+      .role, .entry { margin-top: 9px; }
       .entry-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
       h3 { margin: 0; font-size: 10.5px; font-weight: 650; line-height: 1.4; }
       .when { flex: 0 0 auto; color: var(--muted); font-size: 9px; }
       .where { margin: 1px 0 0; color: var(--muted); font-size: 9px; }
-      .description { margin: 3px 0 0; color: #48534b; font-size: 9.4px; line-height: 1.45; }
-      .project { padding: 7px 0; border-bottom: 1px solid #e9ece7; }
+      .description { margin: 4px 0 0; color: #48534b; font-size: 9.7px; line-height: 1.55; }
+      .project { padding: 9px 0 10px; border-bottom: 1px solid #e9ece7; }
       .project:last-child { border-bottom: 0; }
-      .project h3 { font-family: var(--serif); font-size: 12px; font-weight: 600; }
-      .project .entry-head { margin-bottom: 2px; }
+      .project h3 { font-family: var(--serif); font-size: 13px; font-weight: 600; }
+      .project .entry-head { margin-bottom: 3px; }
       .tag { color: var(--green); font-size: 8px; font-weight: 500; }
       .columns { display: grid; grid-template-columns: 1fr 1fr; gap: 23px; }
       .columns h2 { margin-top: 17px; }
@@ -46,7 +46,13 @@
       .skill strong { display: block; margin-bottom: 2px; color: var(--green); font-size: 9px; font-weight: 650; }
       .skill p { margin: 0; color: #48534b; font-size: 9.1px; line-height: 1.5; }
       .page-number { margin-top: 17px; padding-top: 7px; border-top: 1px solid var(--line); color: var(--muted); font-size: 8px; text-align: right; }
-      .page-two { min-height: 0; }
+      .current-role { display: flex; justify-content: space-between; gap: 20px; padding: 12px 15px; border-left: 2px solid var(--green); background: var(--soft); }
+      .current-role strong { font-family: var(--serif); font-size: 15px; font-weight: 600; }
+      .current-role p { margin: 2px 0 0; color: var(--muted); font-size: 9.5px; }
+      .role-label { align-self: center; color: var(--green); font-family: ui-monospace, monospace; font-size: 9px; letter-spacing: .06em; text-transform: uppercase; }
+      .project-meta { color: var(--muted); font-size: 8.5px; }
+      .page-two { min-height: 297mm; }
+      .cv-footer { display: flex; justify-content: space-between; margin-top: 12px; padding-top: 8px; border-top: 1px solid var(--line); color: var(--muted); font-size: 8px; }
       @media screen and (max-width: 760px) {
         .page { width: auto; min-height: 0; margin: 0; padding: 28px 22px; box-shadow: none; }
         header { align-items: flex-start; flex-direction: column; }
@@ -56,7 +62,7 @@
       @page { size: A4; margin: 0; }
       @media print {
         body { background: white; font-size: 12px; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
-        .page { width: 210mm; height: 297mm; min-height: 297mm; margin: 0; padding: 15mm 18mm 12mm; box-shadow: none; page-break-after: always; break-after: page; overflow: hidden; }
+        .page { width: 210mm; height: 297mm; min-height: 297mm; margin: 0; padding: 15mm 18mm 12mm; box-shadow: none; page-break-after: always; break-after: page; }
         .page:last-child { page-break-after: auto; break-after: auto; }
         h2, .entry, .project, .education-item, .activity-item, .award-item { break-inside: avoid; page-break-inside: avoid; }
         a { color: inherit; }
@@ -80,38 +86,38 @@
 
       <section>
         <h2>Profile</h2>
-        <p class="profile">Fourth-year chemical engineering student interested in chemical reactions and sustainable engineering. Experience across team-based plant design, materials and energy projects, laboratory work, scientific programming, computational simulation, and educational outreach. Particularly interested in materials science, renewable energy, and green chemistry.</p>
+        <p class="profile">Fourth-year B.E. Chemical Engineering student at Kathmandu University, expected to graduate in 2026. Interested in chemical reactions and sustainable engineering, with project experience in process design and simulation, materials science, geothermal energy, and green chemistry. Brings a combination of analytical problem-solving, scientific programming, laboratory project work, and teaching and mentoring experience.</p>
       </section>
 
       <section>
         <h2>Current experience</h2>
-        <div class="role">
-          <div class="entry-head"><h3>Intern</h3></div>
-          <p class="where">CG Brewery · Nawalparasi, Nepal</p>
+        <div class="current-role">
+          <div><strong>CG Brewery</strong><p>Nawalparasi, Nepal</p></div>
+          <span class="role-label">Intern · Current</span>
         </div>
       </section>
 
       <section>
         <h2>Selected projects</h2>
         <div class="project">
-          <div class="entry-head"><h3>CO₂ Utilization for Green Methanol</h3><span class="tag">Fourth-Year Plant Design · Kathmandu University</span></div>
-          <p class="description">Contributed to a team conceptual plant-design study and Aspen Plus simulation integrating cement-flue-gas CO₂ capture, alkaline electrolysis, reverse water-gas shift, methanol synthesis, recycle, and two-stage distillation. Scope included mass and energy balances, equipment and instrumentation, process diagrams, and techno-economic evaluation.</p>
+          <div class="entry-head"><h3>CO₂ Utilization for Green Methanol</h3><span class="project-meta">Fourth-Year Plant Design · Kathmandu University</span></div>
+          <p class="description">Team conceptual design and Aspen Plus V15 simulation of a power-to-methanol process in Nepal. The integrated flowsheet covers MEA-based CO<sub>2</sub> capture from cement-kiln flue gas, alkaline water electrolysis for green hydrogen, reverse water-gas shift, a methanol synthesis loop with recycle, and two-stage distillation. Project scope also includes process flow and piping and instrumentation diagrams, mass and energy balances, equipment and instrumentation specification, and techno-economic assessment. The study also considered cost sensitivities and process-improvement options, including hydrogen recovery from purge gas, staged RWGS with water removal, and heat integration.</p>
         </div>
         <div class="project">
           <div class="entry-head"><h3>MSWI Fly Ash Utilization in Cement Clinker Production</h3><span class="when">2025</span></div>
-          <p class="description">Assessed the feasibility, techno-economics, environmental impact, and circular-economy potential of using industrial fly ash as a clinker substitute.</p>
+          <p class="description">Departmental research project examining the feasibility and techno-economic case for incorporating municipal solid-waste incineration fly ash into cement clinker production. Considered the environmental implications and circular-economy potential of using an industrial waste stream as a clinker substitute.</p>
         </div>
         <div class="project">
           <div class="entry-head"><h3>Geothermal Energy — Air-Based Ground Source Heating</h3><span class="when">2024</span></div>
-          <p class="description">Designed a renewable geothermal heating system; analysed heat transfer and optimisation, and evaluated thermal performance and economic viability. WEIR Lab, Kathmandu University.</p>
+          <p class="description">WEIR Lab, Kathmandu University. Designed an air-based ground-source heating system and carried out heat-transfer analysis and optimisation. Evaluated expected thermal performance and the economic viability of ground-source heat-pump technology.</p>
         </div>
         <div class="project">
           <div class="entry-head"><h3>Photocatalytic Decomposition of Ethylene</h3><span class="when">2024</span></div>
-          <p class="description">Investigated catalytic ethylene removal for post-harvest shelf life using controlled experiments and catalyst-performance optimisation.</p>
+          <p class="description">Departmental semester project investigating catalytic pathways for ethylene removal to support longer post-harvest agricultural shelf life. Planned controlled experiments and considered catalyst-performance parameters for optimisation.</p>
         </div>
         <div class="project">
           <div class="entry-head"><h3>Biodegradable Plastic Film from Potato Starch</h3><span class="when">2023</span></div>
-          <p class="description">Synthesised bio-based polymer films and assessed mechanical, thermal, and biodegradation properties against conventional plastics.</p>
+          <p class="description">Departmental semester project synthesising bio-based polymer films from potato starch. Characterised mechanical and thermal properties and evaluated biodegradability in comparison with conventional plastics, applying green-chemistry principles.</p>
         </div>
       </section>
       <p class="page-number">Yuwen Luitel · Curriculum Vitae · 1</p>
@@ -135,7 +141,7 @@
             <h2>Education</h2>
             <div class="education-item">
               <div class="entry-head"><h3>B.E. Chemical Engineering</h3><span class="when">2022—present</span></div>
-              <p class="detail">Kathmandu University · 4th year · Expected 2026</p>
+              <p class="detail">Kathmandu University · Fourth year · Expected graduation 2026</p>
             </div>
             <div class="education-item">
               <div class="entry-head"><h3>School Leaving Certificate (+2)</h3><span class="when">2022</span></div>
@@ -185,17 +191,18 @@
           <section>
             <h2>Technical skills</h2>
             <div class="skill">
-              <strong>Programming &amp; data</strong>
+              <strong>Programming &amp; scientific computing</strong>
               <p>Python, NumPy, Pandas, Matplotlib, Scikit-learn, C, C++</p>
             </div>
             <div class="skill">
-              <strong>Process &amp; simulation</strong>
-              <p>Aspen Plus, plant design, P&amp;ID, reactor design</p>
+              <strong>Process engineering &amp; simulation</strong>
+              <p>Aspen Plus, plant design, process flow and P&amp;ID, reactor design</p>
             </div>
             <div class="skill">
-              <strong>CAD &amp; laboratory</strong>
+              <strong>CAD, laboratory &amp; materials</strong>
               <p>AutoCAD, SolidWorks, Fusion 360, materials characterisation</p>
             </div>
+            <p class="detail">Applied across coursework, departmental research, and team plant-design projects.</p>
           </section>
           <section>
             <h2>Languages</h2>
@@ -206,7 +213,7 @@
           </section>
         </div>
       </div>
-      <p class="page-number">Yuwen Luitel · Curriculum Vitae · 2</p>
+      <p class="cv-footer"><span>References available upon request</span><span>Yuwen Luitel · Curriculum Vitae · 2</span></p>
     </article>
   </body>
 </html>
